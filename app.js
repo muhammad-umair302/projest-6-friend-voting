@@ -5,8 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById("yes-count");
 	const noCount = 
 		document.getElementById("no-count");
+	const zubaircount = 
+		document.getElementById("zubair-count");
 	let yesVotes = 0;
 	let noVotes = 0;
+	let zubair = 0;
 
 	pollForm.addEventListener("submit", function (e) {
 
@@ -21,11 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else if (userVote === "no") {
 			noVotes++;
 		}
+		 else if (userVote === "zubair") {
+			zubair++;
+		}
 		updateResults();
 	});
 
 	function updateResults() {
 		yesCount.textContent = yesVotes;
 		noCount.textContent = noVotes;
+		zubaircount.textContent = zubair
 	}
 });
